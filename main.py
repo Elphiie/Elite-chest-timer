@@ -10,30 +10,29 @@ import tkinter as tk
 from tkinter import *
 from tkinter import ttk
 from threading import Thread
-from click import command
 
 
 
-class Counter():
-    '''Periodically print counter value to stdout'''
-    def __init__(self, parent, end, start=0, increment=1, interval=1000):
-        self.parent = parent
-        self.start_value = start
-        self.end_value = end
-        self.increment = -increment if (end - start) * increment < 0 else increment
-        self.interval = interval
-        self.value = start
-        self.running = True
+# class Counter():
+#     '''Periodically print counter value to stdout'''
+#     def __init__(self, parent, end, start=0, increment=1, interval=1000):
+#         self.parent = parent
+#         self.start_value = start
+#         self.end_value = end
+#         self.increment = -increment if (end - start) * increment < 0 else increment
+#         self.interval = interval
+#         self.value = start
+#         self.running = True
 
-    def start(self):
-        '''Start counter'''
-        self.value = self.start_value
-        self.running = True
-        self.doit()
+#     def start(self):
+#         '''Start counter'''
+#         self.value = self.start_value
+#         self.running = True
+#         self.doit()
  
-    def stop(self):
-        '''Stop counter'''
-        self.running = False
+#     def stop(self):
+#         '''Stop counter'''
+#         self.running = False
 
 running = True
 
